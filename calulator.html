@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>
+            my calulator
+        </title>
+        <body>
+            <style>
+                .div_style
+                {
+                    background-color: beige;
+                    //margin: 100px 100px 0px 100px;
+                }
+                
+            </style>
+            
+            <script>
+                
+                var resultelments;
+                
+                function setdefault()
+                {
+                   resultelments=document.getElementsByClassName('result');
+                      
+                    var i;
+                    
+                    for(i=0;i < resultelments.length;i++)
+                        {
+                           result=resultelments[i];            funcname=result.getAttribute('function');
+                            
+                            result.innnertext=funcname+"(x)= ";
+                            
+                        }
+                }
+                
+                function getinput()
+                {
+                    var ip=document.getElementById('input').value;
+                    //return
+                    
+                }
+                
+                window.onload=function()
+                {
+                    
+                    setdefault(); document.getElementById('btn').addEventListener('click',calculate,);
+                }
+                
+                function calculate()
+                {
+                   resultelments=window.getElementsByTagName('p');
+                    
+                   // for()
+                    
+                }
+                
+            </script>
+            <div class='div_style'>
+            <h1>Trigonometric Calculator</h1>
+                <p> x =
+                <input id='input' type='text' placeholder="enter value of x"></input>
+            <button id='btn'> Calculate</button>
+            </p>
+        <p class='result' function='sin'></p>
+        <p class='result' function='cos'></p>
+            </div>
+        </body>
+    </head>
+</html>
